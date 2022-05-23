@@ -1,0 +1,24 @@
+.main-recipes__filter {
+    margin-top: 20px;
+    width: 100%;
+    text-align: right;
+    select {
+        width: 100%;
+        max-width: 244px;
+        display: inline-block;
+        padding: 7px 10px;
+        border: 1px solid $tertiary-brand-color;
+        background-color: $primary-brand-color;
+        border-radius: 6px;
+        font: {
+            size: 16px;
+            family: 'Poppins', sans-serif;
+        }
+        @include media-xs {
+            max-width: 100%;
+        }
+    }
+    @include media-xs {
+        width: 100%;
+    }
+}

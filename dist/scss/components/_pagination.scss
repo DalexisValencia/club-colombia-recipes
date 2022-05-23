@@ -1,0 +1,101 @@
+.list-recipes__list-navigation{
+    margin: 30px 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .list-navigation__pages {
+        color: $secondary-brand-color;
+        display: flex;
+        align-items: center;
+        a {
+            margin: 0 10px;
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+            color: $secondary-brand-color;
+            font: {
+                size: 14px;
+                family: 'Inter', sans-serif;
+            }
+            &.active {
+                background-color: $secondary-brand-color;
+                border: 1.5px solid $tertiary-brand-color;
+                color: $tertiary-brand-color;
+                text-align: center;
+                line-height: 2.5;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                font: {
+                    size: 14px;
+                    weight: 500;
+                    family: 'Inter', sans-serif;
+                }
+                @include media-xs {
+                    border-radius: 0;
+                }
+            }
+            @include media-xs {
+                background-color: $primary-brand-color;
+                border-radius: 0px;
+                border:1.5px solid $fifth-brand-color;
+                margin: 0px;
+                flex: 1;
+                line-height: 2.5;
+            }
+        }
+        @include media-xs {
+            width: 100%;
+            align-items: unset
+        }
+
+    }
+    .list-navigation__prev,
+    .list-navigation__next {
+        @extend %button;
+        padding: 7px 15px;
+        background-color: $secondary-brand-color;
+        border: 1.5px solid $tertiary-brand-color;
+        border-radius: 8px;
+        color: $tertiary-brand-color;
+        line-height: 1.5;
+        font: {
+            size: 14px;
+            weight: 500;
+            family: 'Inter', sans-serif;
+        }
+        .text{
+            @include media-xs {
+                display: none;
+            }
+        }
+        .icon-arrow{
+            &.prev{
+                margin-right: 15px;
+                @include media-xs {
+                    margin-right: 0px;
+                }
+            }
+            &.next{
+                margin-left: 15px;
+                transform: scaleX(-1);
+                @include media-xs {
+                    margin-left: 0px;
+                }
+            }
+        }
+        @include media-xs {
+           height: 40px;
+           border-radius: 0;
+           &.list-navigation__next {
+               border-top-right-radius: 6px;
+               border-bottom-right-radius: 6px;
+           }
+           &.list-navigation__prev {
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+           }
+        }
+    }
+}

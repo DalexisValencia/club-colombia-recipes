@@ -1,0 +1,10 @@
+.main-recipes__wrapper{
+    background-color: $fourth-brand-color;
+    width: 100%;
+    padding-bottom: 80px;
+    .main-recipes__max-width{
+        @extend %maxWidth;
+        width: 100%;
+        margin: 0px auto;
+    }
+}

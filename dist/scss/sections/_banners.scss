@@ -1,0 +1,156 @@
+.main-recipes__banner{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+//dots navigation
+.main-recipes__banner-dots{
+    // width: 100%;
+    position: absolute;
+    bottom: 45px;
+    display: flex;
+    z-index: 1;
+    // border: 1px solid red;
+    padding: 9px 7px;
+    background-color: $secondary-brand-color;
+    border-radius: 20px;
+    pointer-events: none;
+    button {
+        pointer-events: all;
+        @extend %button;
+        width: 42px;
+        height: 6px;
+        border-radius: 20px;
+        background-color: rgba($tertiary-brand-color, 0.5);
+        &:not(:last-child){
+            margin-right: 8px;
+        }
+        &.active{
+            background-color: $tertiary-brand-color;
+        }
+    }
+}
+
+//Navigation Arrows
+.main-recipes__banner-nav{
+    position: absolute;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-around;
+    bottom: 45px;
+    z-index: 1;
+    button {
+        width: 44px;
+        height: 44px;
+        background-color: $secondary-brand-color;
+        border: 1.5px solid $tertiary-brand-color;
+        border-radius: 50%;
+        background-image: url(../img/misc/arrow-slider-icon.svg);
+        background-position: 39%;
+        background-size: 30%;
+        @extend %bgImage;
+        user-select: none;
+        color: transparent;
+        &.owl-next{
+            transform: scaleX(-1);
+        }
+    }
+    @include media-xs {
+        display: none;
+        pointer-events: none;
+    }
+}
+
+.banner__item{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    .banner__item-header{
+        @extend %maxWidth;
+        position: absolute;
+        top: 40px;
+        width: 100%;
+        .banner__item-filters{
+            display: flex;
+            justify-content: flex-end;
+            .banner__item-filters-tag{
+                background-color: $secondary-brand-color;
+                border-radius: 8px;
+                text-align: center;
+                padding: 7px 12px;
+                border: 1.5px solid $tertiary-brand-color;
+                color: $tertiary-brand-color;
+                font: {
+                    size: 14px;
+                    family: 'Inter', sans-serif;
+                }
+                &.title{
+                    margin-right: auto;
+                }
+                &.time {
+                    margin-right: 10px;
+                }
+                @include media-xs {
+                    font-size: 12px;
+                }
+            }
+            @include media-xs {
+                flex-wrap: wrap;
+            }
+        }
+        .banner__item-detailed{
+            .banner__item-header-title{
+                max-width: 45%;
+                margin-top: 7%;
+                color: $primary-brand-color;
+                font: {
+                    size: 3vw;
+                    family: 'Inter', sans-serif;
+                }
+                @include media-min-width{
+                    font-size: 36px;;
+                }
+                @include media-xs {
+                    max-width: 100%;
+                    font-size: 24px;
+                }
+            }
+            .banner__item-header-more {
+                margin-top: 20px;
+                @extend %button;
+                background-color: $secondary-brand-color;
+                border-radius: 8px;
+                text-align: center;
+                padding: 7px 12px;
+                border: 1.5px solid $tertiary-brand-color;
+                color: $primary-brand-color;
+                width: 100%;
+                max-width: 324px;
+                font-size: 16px;
+                font-family: 'Poppins', sans-serif;
+                @include media-xs {
+                    max-width: 100%;
+                    // position: absolute;
+                    // bottom: 110px;
+                }
+            }
+            @include media-xs {
+                // border: 5px solid magenta;
+                max-width: calc( 100% - 40px );
+                position: absolute;
+                bottom: 110px;
+            }
+        }
+        @include media-xs {
+            height: calc( 100% - 40px );
+        }
+    }
+    .banner__item-image{
+        width: 100%;
+    }
+    
+}
