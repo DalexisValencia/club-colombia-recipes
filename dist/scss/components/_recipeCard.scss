@@ -10,7 +10,6 @@
     grid-template-columns: auto auto auto;
     row-gap: 1%;
     padding-bottom: 34px;
-    border: 1px dashed orangered;
     @include media-sm {
         grid-template-columns: auto auto;
     }

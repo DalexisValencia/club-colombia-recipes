@@ -1,0 +1,73 @@
+.detail-recipes__wrapper{
+    background-color: $fourth-brand-color;
+}
+
+.detail-recipes__max-width {
+    @extend %maxWidth;
+    border: 1px solid red;
+}
+
+//Time Difficult and Portions 
+.detail-recipes__details-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 0;
+    margin-top: 10px;
+    border-bottom: 1px solid $fifth-brand-color;
+    .details-container__info{
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+        img {
+            width: 95px;
+            margin-right: 15px;
+            @include media-sm {
+                width: 50px;
+            }
+            @include media-xs {
+                margin-right: 0;
+            }
+        }
+        .details-container__info-description{
+            padding-right: 10px;
+            .details-container__info-key{
+                color: $secondary-brand-color;
+                font: {
+                    size: 16px;
+                    family: 'Poppins', sans-serif;
+                    weight: bold;
+                }
+                @include media-xs {
+                    text-align: center;
+                    font-size: 12px;
+                    display: none;
+                }
+            }
+            .details-container__info-value{
+                color: #A0A0A0;
+                margin-top: 10px;
+                font: {
+                    size: 16px;
+                    family: 'Poppins', sans-serif;
+                    weight: 300;
+                }
+                @include media-xs {
+                    text-align: center;
+                    font-size: 12px;
+                }
+            }
+            @include media-xs {
+                width: 100%;
+                padding-right: 0px;
+            }
+        }
+        @include media-xs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}
