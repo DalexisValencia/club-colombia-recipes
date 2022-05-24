@@ -1,0 +1,30 @@
+.main-recipes__labels-container{
+    width: 100%;
+    border: 1px dashed red;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    .main-recipes__label {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 9px 9px;
+        border-radius: 50px;
+        background-color: #d9dbde;
+        color: #344054;
+        text-align: center;
+        font: {
+            size: 14px;
+            family: 'Inter', sans-serif;
+        }
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+        img {
+            width: 12px;
+            height: 12px;
+            cursor: pointer;
+            margin-left: 3px;
+        }
+    }
+}
