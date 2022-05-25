@@ -46,5 +46,37 @@
                 iframe.attr("src", iframe.attr("src")+"?autoplay=1").addClass("playing");
             });
         }
+
+        //Gallery steps
+        const gallerySteps = $(".detail-recipes__gallery.owl-carousel");
+        if(gallerySteps) {
+            gallerySteps.owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                navContainer: $(".detail-recipes__gallery-nav"),
+                dots: true,
+                dotsContainer: $(".detail-recipes__gallery-dots"),
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: false,
+                        navContainer: "",
+                    },
+                    600: {
+                        items: 1,
+                        nav: false,
+                        navContainer: "",
+                    },
+                    1000: {
+                        items: 1,
+                        nav: true,
+                        navContainer: $(".detail-recipes__gallery-nav"),
+                        dots: true,
+                        dotsContainer: $(".detail-recipes__gallery-dots"),
+                    }
+                }
+            });
+        }
     });
 })(jQuery);

@@ -1,0 +1,23 @@
+.detail-recipes__actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 0;
+    button {
+        padding: 15px 20px;
+        width: 100%;
+        max-width: 350px;
+        @extend %button;
+        color: $primary-brand-color;
+        background-color: $secondary-brand-color;
+        border: 3px solid $tertiary-brand-color;
+        border-radius: 12px;
+        img {
+            margin-right: 10px;
+        }
+        font: {
+            size: 16px;
+            family: 'Poppins', sans-serif;
+        }
+    }
+}

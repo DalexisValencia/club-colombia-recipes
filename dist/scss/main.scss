@@ -9,6 +9,7 @@
 @import "components/input";
 @import "components/recipeCard";
 @import "components/selects";
+@import "components/checkbox";
 //pages 
 @import "pages/recipes";
 @import "pages/detail";
@@ -20,3 +21,7 @@
 @import "sections/banners";
 @import "sections/bannerDetails";
 @import "sections/ingredients";
+@import "sections/steps";
+@import "sections/recipeActions";
+@import "sections/highlight";
+@import "sections/newsletter";

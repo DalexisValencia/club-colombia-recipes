@@ -1,6 +1,7 @@
 .detail-recipes__ingredients{
     display: flex;
-    border: 1px dashed black;
+    padding: 75px 0;
+    border-bottom: 1px solid $fifth-brand-color;
 }
 
 //Prev video container
@@ -9,6 +10,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex: 1;
+    border: 1px dashed red;
     .ingredients-video__iframe{
         width: 100%;
         height: 100%;
@@ -40,5 +43,107 @@
            opacity: 0;
            pointer-events: none;
        }
+    }
+}
+
+.detail-recipes__ingredients-video-wrapper {
+    border: 1px solid red;
+    flex: 1;
+}
+
+.detail-recipes__ingredients-detailed{
+    padding: 20px 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    .ingredients-detailed__title {
+        color: $eigth-brand-color;
+        font: {
+            family: 'Inter', sans-serif;
+            size: 26px;
+            weight: bold;
+        }   
+    }
+    .ingredients-detailed__title,
+    .ingredients-detailed__list {
+        margin-left: 30px;
+    }
+
+    .ingredients-detailed__list{
+        width: 100%;
+        padding: 0;
+        margin-top: 40px;
+        list-style: none;
+        * {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+        }
+        li {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            .list__val{
+                font-weight: bold;
+            }
+        }
+    }
+
+    .ingredients-detailed__pairing{
+        border: 1px solid red;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 45px;
+        .pairing__image{
+            max-width: 119px;
+            margin-right: 30px;
+        }
+        .pairing__detail{
+            padding-top: 30px;
+            color: $eigth-brand-color;
+            .pairing__title{
+                font: {
+                    family: 'Inter', sans-serif;
+                    size: 26px;
+                    weight: bold;
+                }   
+            }
+            .pairing__name{
+                margin: 15px 0;
+                font: {
+                    family: 'Poppins', sans-serif;
+                    size: 16px;
+                    weight: 700;
+                } 
+            }
+            .pairing__description{
+                width: 100%;
+                max-width: 75%;
+                color: #A5A5A5;
+                font: {
+                    family: 'Poppins', sans-serif;
+                    size: 16px;
+                    weight: 500;
+                }  
+            }
+            .pairing__btn{
+                margin-top: 20px;
+                @extend %button;
+                width: 100%;
+                max-width: 200px;
+                line-height: 1.2;
+                color: $primary-brand-color;
+                border: 2px solid $tertiary-brand-color;
+                background-color: $secondary-brand-color;
+                padding: 10px 15px;
+                border-radius: 12px;
+
+                font: {
+                    family: 'Poppins', sans-serif;
+                    size: 16px;
+                    weight: 600;
+                }  
+            }
+        }
     }
 }

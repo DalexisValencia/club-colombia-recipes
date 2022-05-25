@@ -1,0 +1,162 @@
+.detail-recipes__newsletter{
+    padding: 80px 0 90px;
+    position: relative;
+    @extend %bgImage;
+    background-size: cover;
+    background-image: url(../img/bg/newsletter-bg.png);
+    overflow: hidden;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 380px;
+        height: 528px;
+        @extend %bgImage;
+        z-index: 1;
+        top: 60px;
+        left: -190px;
+        background-image: url(../img/misc/totem.png);
+        @include media-sm {
+            display: none;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        @extend %bgImage;
+        background-image: url(../img/misc/lateral-decoration.svg);
+        top: 40px;
+        right: 33px;
+        width: 46px;
+        height: 205px;
+        @include media-sm {
+            background-image: url(../img/misc/lateral-decoration-mobile.svg);
+            top: unset;
+            bottom: 35px;
+            left: 33px;
+            right: unset;
+            width: 127px;
+            height: 36px;
+        }
+    }
+}
+
+.detail-recipes__newsletter-title{
+    color: $primary-brand-color;
+    text-align: center;
+    position: relative;
+    padding: 0 50px;
+    font: {
+        size: 26px;
+        family: 'Inter', sans-serif;
+    }
+    @include media-sm {
+        font-size: 20px;
+    }
+}
+
+.detail-recipes__newsletter-description {
+    color: $tertiary-brand-color;
+    margin: 20px 0;
+    text-align: center;
+    position: relative;
+    padding: 0 50px;
+    font: {
+        size: 16px;
+        family: 'Poppins', sans-serif;
+    }
+}
+
+.detail-recipes__newsletter-title,
+.detail-recipes__newsletter-description,
+.detail-recipes__newsletter-form-wrapper{
+    position: relative;
+    z-index: 1;
+}
+
+.detail-recipes__newsletter-form-wrapper{
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+.detail-recipes__newsletter-form{
+    max-width: 350px;
+    margin: 30px auto;
+    .block-form{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        label {
+            width: 100%;
+            display: block;
+            text-align: left;
+            &:not(.error){
+                margin-bottom: 10px;
+                color: $tertiary-brand-color;
+                font: {
+                    family: 'Poppins', sans-serif;
+                    size: 14px;
+                }
+            }
+        }
+
+        input:not([type="checkbox"]) {
+            @extend %input;
+            border-radius: 8px;
+            width: 100%;
+            color: $primary-brand-color;
+            padding: 15px 10px;
+            background-color: rgba($primary-brand-color, 0.2);
+            border: 1px solid $primary-brand-color;
+            font: {
+                family: 'Poppins', sans-serif;
+                size: 16px;
+            }
+            &::placeholder{
+                color: rgba($primary-brand-color, 0.6);
+            }
+        }
+    }
+
+    .block-terms{
+        margin-top: 35px;
+        .js-form-item {
+            padding-left: 40px;
+            position: relative;
+            margin-bottom: 10px;
+            input[type="checkbox"] {
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                @extend %checkbox;
+            }
+            label {
+                color: $primary-brand-color;
+                font: {
+                    family: 'Poppins', sans-serif;
+                    size: 10px;
+                }
+                a {
+                    text-decoration: underline;
+                    color: $tertiary-brand-color;
+                }
+            }
+        }
+    }
+
+    .block-actions{
+        width: 100%;
+        margin-top: 20px;
+        button {
+            width: 100%;
+            padding: 10px 15px;
+            background-color: $secondary-brand-color;
+            border-radius: 6px;
+            color: $primary-brand-color;
+            text-align: center;
+            border: 2px solid $tertiary-brand-color;
+        }
+    }
+}

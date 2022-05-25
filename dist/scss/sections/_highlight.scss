@@ -1,0 +1,33 @@
+.detail-recipes__highlight{
+    text-align: center;
+    margin-bottom: 70px;
+    .detail-recipes__highlight-title {
+        text-align: center;
+        color: $secondary-brand-color;
+        margin-bottom: 70px;
+        font: {
+            size: 26px;
+            family: 'Inter', sans-serif;
+        }
+        @include media-sm {
+            font-size: 20px
+        }
+    }
+
+    .detail-recipes__highlight-btn{
+        @extend %button;
+        color: $primary-brand-color;
+        border: 2px solid $tertiary-brand-color;
+        border-radius: 8px;
+        background-color: $secondary-brand-color;
+        padding: 12px 20px;
+        display: inline-block;
+        font: {
+            size: 16px;
+            family: 'Poppins', sans-serif;
+        }
+        @include media-sm {
+            width: 100%;
+        }
+    }
+}

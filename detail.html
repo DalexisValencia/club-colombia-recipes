@@ -68,10 +68,12 @@
             </section>
 
             <section class="detail-recipes__ingredients">
-                <div class="detail-recipes__ingredients-video">
-                    <iframe src="https://www.youtube.com/embed/uhvKSTQd06k" frameborder="0" class="ingredients-video__iframe"></iframe>
-                    <img src="dist/img/detail-video-cover.png" alt="" class="ingredients-video__cover">
-                    <button class="ingredients-video__play"></button>
+                <div class="detail-recipes__ingredients-video-wrapper">
+                    <div class="detail-recipes__ingredients-video">
+                        <iframe src="https://www.youtube.com/embed/uhvKSTQd06k" frameborder="0" class="ingredients-video__iframe"></iframe>
+                        <img src="dist/img/detail-video-cover.png" alt="" class="ingredients-video__cover">
+                        <button class="ingredients-video__play"></button>
+                    </div>
                 </div>
 
                 <div class="detail-recipes__ingredients-detailed">
@@ -94,7 +96,7 @@
                     </ul>
 
                     <div class="ingredients-detailed__pairing">
-                        <img src="" alt="" sizes="" class="pairing__image"/>
+                        <img src="dist/img/sku-home-dm.png" alt="" sizes="" class="pairing__image"/>
                         <div class="pairing__detail">
                             <h2 class="pairing__title">
                                 Maridaje
@@ -149,42 +151,62 @@
                         </li>
                     </ul>
 
-                    <div class="detail-recipes__greetings">
-                        <img src="" alt="">
-                        <h3>¡Buen Provecho!</h3>
-                    </div>
+                    <button class="detail-recipes__greetings">
+                        <img src="dist/img/misc/heart-icon.svg" alt="">
+                        ¡Buen Provecho!
+                    </button>
                 </div>
 
                 <div class="detail-recipes__gallery-wrapper">
-                    <div class="detail-recipes__gallery">
-                        <div class="detail-recipes__gallery-card">
-                            <picture class="gallery-card__image">
-                                <source media="(min-width:600px)" srcset="dist/img/card-detail-default.png">
-                                <img src="dist/img/card-detail-default.png" alt="">
-                            </picture>
-                            <div class="gallery-card__label">
-                                
+                    <div class="detail-recipes__gallery-container">
+                        <div class="detail-recipes__gallery owl-carousel">
+                            <div class="detail-recipes__gallery-card">
+                                <picture class="gallery-card__image">
+                                    <source media="(min-width:600px)" srcset="dist/img/card-detail-default.png">
+                                    <img src="dist/img/card-detail-default.png" alt="">
+                                </picture>
+                                <div class="gallery-card__label">
+                                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus”...
+                                </div>
+                            </div>
+                            <div class="detail-recipes__gallery-card">
+                                <picture class="gallery-card__image">
+                                    <source media="(min-width:600px)" srcset="dist/img/card-detail-default.png">
+                                    <img src="dist/img/card-detail-default.png" alt="">
+                                </picture>
+                                <div class="gallery-card__label">
+                                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus”...
+                                </div>
+                            </div>
+                            <div class="detail-recipes__gallery-card">
+                                <picture class="gallery-card__image">
+                                    <source media="(min-width:600px)" srcset="dist/img/card-detail-default.png">
+                                    <img src="dist/img/card-detail-default.png" alt="">
+                                </picture>
+                                <div class="gallery-card__label">
+                                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus”...
+                                </div>
                             </div>
                         </div>
+                        <div class="detail-recipes__gallery-nav"></div>
+                        <div class="detail-recipes__gallery-dots"></div>
                     </div>
-                    <div class="detail-recipes__gallery-nav"></div>
-                    <div class="detail-recipes__gallery-dots"></div>
                 </div>
             </section>
 
             <section class="detail-recipes__actions">
                 <button>
-                    <img src="" alt="">
+                    <img src="dist/img/misc/mark-icon.svg" alt="">
                     Guardar
                 </button>
 
                 <button>
-                    <img src="" alt="">
+                    <img src="dist/img/misc/share-icon.svg" alt="">
                     Compartir
                 </button>
 
                 <button>
-                    <img src="" alt="">
+                    <img src="dist/img/misc/download-icon.svg" alt="">
                     Descargar
                 </button>
             </section>
@@ -198,55 +220,55 @@
 
                 </div>
 
-                <button>
+                <button class="detail-recipes__highlight-btn">
                     Ver todas las recetas
                 </button>
             </section>
-
-            <section class="detail-recipes__newsletter">
-                <h2>
-                    Recibe todas la novedades
-                </h2>
-                <p>
-                    ¿Listo para recibir recetas divertidas, consejos, ofertas y más en tu bandeja de entrada?
-                </p>
-
-                <div>
-                    <form action="">
-                        <div class="block-form">
-                            <label for="">Nombre completo</label>
-                            <input type="text" placeholder="Como aparece en tu documento"/>
-                        </div>
-                        <div class="block-form">
-                            <label for="">Correo electrónico</label>
-                            <input type="text" placeholder="nombre@mail.com"/>
-                        </div>
-
-                        <div class="block-form block-terms">
-                            <div class="js-form-item">
-                                <input type="checkbox">
-                                <label for="">
-                                    He leído, entendido y aceptado los <a>Términos y Condiciones y la política de protección de datos personales</a>
-                                </label>
-                            </div>
-
-                            <div class="js-form-item">
-                                <input type="checkbox">
-                                <label for="">
-                                    Acepto recibir información comercial y promociones de Club Colombia
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="block-form block-actions">
-                            <button>
-                                Suscríbete a nuestro boletin
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </section>
         </div>
+
+        <section class="detail-recipes__newsletter">
+            <h2 class="detail-recipes__newsletter-title">
+                Recibe todas la novedades
+            </h2>
+            <p class="detail-recipes__newsletter-description">
+                ¿Listo para recibir recetas divertidas, consejos, ofertas y más en tu bandeja de entrada?
+            </p>
+
+            <div class="detail-recipes__newsletter-form-wrapper">
+                <form action="" class="detail-recipes__newsletter-form">
+                    <div class="block-form">
+                        <label for="">Nombre completo</label>
+                        <input type="text" placeholder="Como aparece en tu documento"/>
+                    </div>
+                    <div class="block-form">
+                        <label for="">Correo electrónico</label>
+                        <input type="text" placeholder="nombre@mail.com"/>
+                    </div>
+
+                    <div class="block-form block-terms">
+                        <div class="js-form-item">
+                            <input type="checkbox">
+                            <label for="">
+                                He leído, entendido y aceptado los <a href="#">Términos y Condiciones y la política de protección de datos personales</a>
+                            </label>
+                        </div>
+
+                        <div class="js-form-item">
+                            <input type="checkbox">
+                            <label for="">
+                                Acepto recibir información comercial y promociones de Club Colombia
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="block-form block-actions">
+                        <button>
+                            Suscríbete a nuestro boletin
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
 </body>
 <script src="dist/vendor/jquery-3.6.0.slim.js"></script>
