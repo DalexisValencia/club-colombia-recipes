@@ -5,13 +5,16 @@
     padding: 70px 0;
     button {
         padding: 15px 20px;
-        width: 100%;
+        width: 30%;
         max-width: 350px;
         @extend %button;
         color: $primary-brand-color;
         background-color: $secondary-brand-color;
         border: 3px solid $tertiary-brand-color;
         border-radius: 12px;
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
         img {
             margin-right: 10px;
         }
@@ -19,5 +22,14 @@
             size: 16px;
             family: 'Poppins', sans-serif;
         }
+        @include media-sm {
+            max-width: 100%;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+    }
+    @include media-sm {
+        flex-wrap: wrap;
+        padding: 35px 0;
     }
 }
