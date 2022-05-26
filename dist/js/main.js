@@ -60,20 +60,12 @@
                 responsive: {
                     0: {
                         items: 1,
-                        nav: false,
-                        navContainer: "",
                     },
                     600: {
                         items: 1,
-                        nav: false,
-                        navContainer: "",
                     },
                     1000: {
                         items: 1,
-                        nav: true,
-                        navContainer: $(".detail-recipes__gallery-nav"),
-                        dots: true,
-                        dotsContainer: $(".detail-recipes__gallery-dots"),
                     }
                 }
             });
