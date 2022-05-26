@@ -43,7 +43,7 @@
     justify-content: space-between;
     .popular-title {
         text-transform: uppercase;
-
+        width: 100%;
         font: {
             size: 12px;
             family: 'Poppins', sans-serif;
@@ -63,7 +63,6 @@
             border: 2px solid $secondary-brand-color;
             color: $secondary-brand-color;
             background-color: transparent;
-
             &:last-child {
                 margin-right: 0;
             }
@@ -76,6 +75,7 @@
                 border-radius: 10px;
                 font-size: 10px;
                 padding: 8px;
+                margin-bottom: 10px;
             }
         }
         @include media-xs {
